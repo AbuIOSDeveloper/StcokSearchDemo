@@ -1,0 +1,32 @@
+//
+//  AbuPrefixHeader.pch
+//  SearchDemo
+//
+//  Created by mac on 17/3/21.
+//  Copyright © 2017年 阿布. All rights reserved.
+//
+
+#ifndef AbuPrefixHeader_pch
+#define AbuPrefixHeader_pch
+#import <Masonry.h>
+#import "AbuStcokList.h"
+#import "AbuStcokModel.h"
+#import "AbuSearchViewCell.h"
+/* Color*/
+#define HSColor(r, g, b) [NSColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+/*  weakSelf */
+#define HS_WeakSelf(weakSelf) __weak __typeof(self) weakSelf = self
+
+/*  **** 判断字典、数组是否为空 ****  */
+#define IsDictionaryNull(dict) (nil == dict || ![dict isKindOfClass:[NSDictionary class]]\
+|| [dict isKindOfClass:[NSNull class]] || [dict allKeys].count <= 0)
+#define IsArrayNull(array) ((nil == array || ![array isKindOfClass:[NSArray class]]\
+|| [array isKindOfClass:[NSNull class]] || array.count <= 0))
+#define IsStringNull(string) (nil == string || [string isKindOfClass:[NSNull class]] \
+|| string.length <= 0)
+#define IsObjectNull(object) (nil == object || [object isKindOfClass:[NSNull class]])
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* AbuPrefixHeader_pch */
